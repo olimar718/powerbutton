@@ -13,7 +13,8 @@ public class customtile extends TileService{
         super.onClick();
         //Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
         try {
-            Thread.sleep(1000);
+            Runtime.getRuntime().exec("su -c input keyevent KEYCODE_BACK");
+            Thread.sleep(500);
             Runtime.getRuntime().exec("su -c input keyevent --longpress 26");
         } catch (Exception e) {
             e.printStackTrace();
